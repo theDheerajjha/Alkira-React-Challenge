@@ -52,10 +52,9 @@ export const TeamList = () => {
   };
 
   const fetchSpecificTeamGameDetails = async (id) => {
-    const seasons = 2021;
-
+    const session = 2021;
     try {
-      const response = await getSpecificTeamGameDetails(seasons, id);
+      const response = await getSpecificTeamGameDetails(session, id);
       if (response.meta.total_count) {
         setTotalGameCount(response.meta.total_count);
         const randomNumber = Math.floor(Math.random() * response.data.length);
@@ -110,13 +109,12 @@ export const TeamList = () => {
     },
     table: {
       style: {
-        marginLeft:"22px"
-        
+        marginLeft: "22px",
       },
     },
     header: {
       style: {
-        fontSize: '25px',
+        fontSize: "25px",
       },
     },
   };
@@ -188,7 +186,7 @@ export const TeamList = () => {
                 Home Team
               </Col>
               <Col xs={8} md={4}>
-                 {homeTeamName}
+                {homeTeamName}
               </Col>
             </Row>
             <Row className="fw-bold my-3">
@@ -196,7 +194,7 @@ export const TeamList = () => {
                 Home Team Score
               </Col>
               <Col xs={8} md={4}>
-              {randomGameDetails.home_team_score}
+                {randomGameDetails.home_team_score}
               </Col>
             </Row>
             <Row className="fw-bold my-3">
@@ -204,7 +202,7 @@ export const TeamList = () => {
                 Visitor Team
               </Col>
               <Col xs={8} md={4}>
-              {visitorTeamName}
+                {visitorTeamName}
               </Col>
             </Row>
             <Row className="fw-bold my-3">
