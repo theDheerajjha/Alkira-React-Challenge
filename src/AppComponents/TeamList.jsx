@@ -52,9 +52,9 @@ export const TeamList = () => {
   };
 
   const fetchSpecificTeamGameDetails = async (id) => {
-    const session = 2021;
+    const sessionValue = 2021;
     try {
-      const response = await getSpecificTeamGameDetails(session, id);
+      const response = await getSpecificTeamGameDetails(sessionValue, id);
       if (response.meta.total_count) {
         setTotalGameCount(response.meta.total_count);
         const randomNumber = Math.floor(Math.random() * response.data.length);
