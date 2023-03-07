@@ -178,7 +178,7 @@ export const TeamList = () => {
                 Date
               </Col>
               <Col xs={8} md={4}>
-                {formatDate(randomGameDetails.date, "DD-MM-YYYY")}
+                {formatDate(randomGameDetails.date, "MM-DD-YYYY")}
               </Col>
             </Row>
             <Row className="fw-bold my-3">
