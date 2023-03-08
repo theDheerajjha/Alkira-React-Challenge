@@ -26,6 +26,13 @@ export const TeamList = () => {
     fetchAllTeams();
   }, []);
 
+  useEffect(() => {
+    const result = teamList.filter((list) => {
+      return list.name.toLowerCase().match(search.toLowerCase());
+    });
+    setfilteredList(result);
+  }, [search]);
+
   const handleClose = () => setShow(false);
 
   const handleShow = (id) => {
@@ -66,13 +73,6 @@ export const TeamList = () => {
       }
     } catch (error) {}
   };
-
-  useEffect(() => {
-    const result = teamList.filter((list) => {
-      return list.name.toLowerCase().match(search.toLowerCase());
-    });
-    setfilteredList(result);
-  }, [search]);
 
   const columns = [
     {
