@@ -132,7 +132,7 @@ export const TeamList = () => {
         selectableRowsHighlight
         highlightOnHover
         customStyles={customStyles}
-        subHeaderAlign="left"
+        subHeaderAlign="center"
         subHeader
         onRowClicked={(row) => handleShow(row.id)}
         row
